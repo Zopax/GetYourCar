@@ -22,31 +22,33 @@ namespace GetYourCar
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            LoadDataDriver();
-            LoadDataCar();
-            LoadDataRoute();
+            LoadData();
         }
 
-        void LoadDataDriver()
+        void LoadData()
         {
             DriversDGrid.ItemsSource = Helper.GetContext().Drivers.ToList();
-        }
-
-        void LoadDataCar()
-        {
             CarsDGrid.ItemsSource = Helper.GetContext().Cars.Include(i => i.IdTypeCarNavigation).ToList();
+            RoutesDGrid.ItemsSource = Helper.GetContext().Routes
+                    .Include(w => w.IdCarNavigation).Include(w => w.IdDriverNavigation)
+                    .Include(w => w.IdItineraryNavigation).ToList();
         }
 
-        void LoadDataRoute()
+        private void StationButton_Click(object sender, RoutedEventArgs e)
         {
-            RoutesDGrid.ItemsSource = Helper.GetContext().Routes
-                .Include(w => w.IdCarNavigation).Include(w => w.IdDriverNavigation)
-                .Include(w => w.IdItineraryNavigation).ToList();
+            Window addDriver = new AddDriverDataWindow();
+            addDriver.Show();
+        }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

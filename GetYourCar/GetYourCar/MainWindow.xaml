@@ -7,64 +7,78 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
     <Grid>
-      <TabControl>
-        <TabItem x:Name="DriverTab">
-            <TabItem.Header>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin="15">Водители</TextBlock>
-            </StackPanel>
-            </TabItem.Header>
-            <TabItem.Content>
-                <DataGrid AutoGenerateColumns="False"
-                        Name="DriversDGrid"
-                        ColumnWidth="*">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
-                        <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
-                        <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthdate}"/>
-                        <DataGridTextColumn Header="Категории прав" Binding="{Binding RightsCategories}"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </TabItem.Content>
-        </TabItem>
-        <TabItem x:Name="CarTab">
-            <TabItem.Header>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Margin="15">Машины</TextBlock>
-                </StackPanel>
-            </TabItem.Header>
-            <TabItem.Content>
-                <DataGrid AutoGenerateColumns="False"
+        <TabControl>
+            <TabItem x:Name="DriverTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15">Водители</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <DataGrid AutoGenerateColumns="False"
+                         Name="DriversDGrid"
+                         ColumnWidth="*">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+                                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthdate, StringFormat={}{0:dd/MM/yyyy}}"/>
+                                <DataGridTextColumn Header="Категории прав" Binding="{Binding RightsCategories}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <StackPanel Grid.Row="1"
+                                    Orientation="Horizontal">
+                            <Button Name="StationButton" Content="Добавить" Click="StationButton_Click" Margin="10"/>
+                            <Button Name="UpdateButton" Content="Обновить" Click="UpdateButton_Click" Margin="10"/>
+                        </StackPanel>
+                    </Grid>
+                    
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="CarTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15">Машины</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <DataGrid AutoGenerateColumns="False"
                             Name="CarsDGrid"
                             ColumnWidth="*">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Тип" Binding="{Binding TypeCar}"/>
-                        <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
-                        <DataGridTextColumn Header="Номер" Binding="{Binding StateNumber}"/>
-                        <DataGridTextColumn Header="Кол-во мест" Binding="{Binding NumberPassengers}"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </TabItem.Content>
-        </TabItem>
-        <TabItem x:Name="RouteTab">
-            <TabItem.Header>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Margin="15">Рейсы</TextBlock>
-                </StackPanel>
-            </TabItem.Header>
-            <TabItem.Content>
-                <DataGrid AutoGenerateColumns="False"
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Тип" Binding="{Binding TypeCar}"/>
+                            <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Номер" Binding="{Binding StateNumber}"/>
+                            <DataGridTextColumn Header="Кол-во мест" Binding="{Binding NumberPassengers}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="RouteTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15">Рейсы</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <DataGrid AutoGenerateColumns="False"
                         Name="RoutesDGrid"
                         ColumnWidth="*">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Название маршрута" Binding="{Binding Itinerary}"/>
-                        <DataGridTextColumn Header="Транспорт" Binding="{Binding Car}"/>
-                        <DataGridTextColumn Header="Водитель" Binding="{Binding Driver}"/>
-                        <DataGridTextColumn Header="Кол-во мест" Binding="{Binding NumberPassengers}"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </TabItem.Content>
-        </TabItem>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Название маршрута" Binding="{Binding Itinerary}"/>
+                            <DataGridTextColumn Header="Транспорт" Binding="{Binding Car}"/>
+                            <DataGridTextColumn Header="Водитель" Binding="{Binding Driver}"/>
+                            <DataGridTextColumn Header="Кол-во мест" Binding="{Binding NumberPassengers}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem.Content>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
+
+        

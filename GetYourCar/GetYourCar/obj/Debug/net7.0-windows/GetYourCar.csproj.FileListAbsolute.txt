@@ -62,3 +62,5 @@ C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows
 C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows\GetYourCar.pdb
 C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows\GetYourCar.genruntimeconfig.cache
 C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows\ref\GetYourCar.dll
+C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows\AddDriverDataWindow.g.cs
+C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows\AddDriverDataWindow.baml
