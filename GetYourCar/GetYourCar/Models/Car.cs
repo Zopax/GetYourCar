@@ -11,9 +11,9 @@ public partial class Car
 
     public int IdTypeCar { get; set; }
 
-    public string Name { get; set; } = null!;
+    public string? Name { get; set; } = null!;
 
-    public string StateNumber { get; set; } = null!;
+    public string? StateNumber { get; set; } = null!;
 
     public int NumberPassengers { get; set; }
 

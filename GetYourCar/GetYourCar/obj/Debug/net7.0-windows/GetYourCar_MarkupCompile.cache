@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\App.xaml
-21608335033
+4-2104902470
 
-12-517434757
+14-151729990
 228-2023181223
-AddDriverDataWindow.xaml;MainWindow.xaml;
+AddCarDataWindow.xaml;AddDriverDataWindow.xaml;AddRouteDataWindow.xaml;MainWindow.xaml;
 
-False
+True
 

@@ -32,11 +32,9 @@
                         </DataGrid>
                         <StackPanel Grid.Row="1"
                                     Orientation="Horizontal">
-                            <Button Name="StationButton" Content="Добавить" Click="StationButton_Click" Margin="10"/>
-                            <Button Name="UpdateButton" Content="Обновить" Click="UpdateButton_Click" Margin="10"/>
+                            <Button Name="StationButton" Content="Добавить" Click="AddDriver_Click" Margin="10"/>
                         </StackPanel>
                     </Grid>
-                    
                 </TabItem.Content>
             </TabItem>
             <TabItem x:Name="CarTab">
@@ -46,16 +44,26 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <DataGrid AutoGenerateColumns="False"
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <DataGrid AutoGenerateColumns="False"
                             Name="CarsDGrid"
                             ColumnWidth="*">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Тип" Binding="{Binding TypeCar}"/>
-                            <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
-                            <DataGridTextColumn Header="Номер" Binding="{Binding StateNumber}"/>
-                            <DataGridTextColumn Header="Кол-во мест" Binding="{Binding NumberPassengers}"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Тип" Binding="{Binding TypeCar}"/>
+                                <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+                                <DataGridTextColumn Header="Номер" Binding="{Binding StateNumber}"/>
+                                <DataGridTextColumn Header="Кол-во мест" Binding="{Binding NumberPassengers}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <StackPanel Grid.Row="1"
+                                    Orientation="Horizontal">
+                            <Button Name="AddCar" Content="Добавить" Click="AddCar_Click" Margin="10"/>
+                        </StackPanel>
+                    </Grid>
                 </TabItem.Content>
             </TabItem>
             <TabItem x:Name="RouteTab">
@@ -65,16 +73,26 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <DataGrid AutoGenerateColumns="False"
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <DataGrid AutoGenerateColumns="False"
                         Name="RoutesDGrid"
                         ColumnWidth="*">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Название маршрута" Binding="{Binding Itinerary}"/>
-                            <DataGridTextColumn Header="Транспорт" Binding="{Binding Car}"/>
-                            <DataGridTextColumn Header="Водитель" Binding="{Binding Driver}"/>
-                            <DataGridTextColumn Header="Кол-во мест" Binding="{Binding NumberPassengers}"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Название маршрута" Binding="{Binding Itinerary}"/>
+                                <DataGridTextColumn Header="Транспорт" Binding="{Binding Car}"/>
+                                <DataGridTextColumn Header="Водитель" Binding="{Binding Driver}"/>
+                                <DataGridTextColumn Header="Кол-во мест" Binding="{Binding NumberPassengers}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <StackPanel Grid.Row="1"
+                                    Orientation="Horizontal">
+                            <Button Name="AddRoute" Content="Добавить" Click="AddRoute_Click" Margin="10"/>
+                        </StackPanel>
+                    </Grid>
                 </TabItem.Content>
             </TabItem>
         </TabControl>

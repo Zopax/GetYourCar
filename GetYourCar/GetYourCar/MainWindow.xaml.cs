@@ -40,15 +40,22 @@ namespace GetYourCar
                     .Include(w => w.IdItineraryNavigation).ToList();
         }
 
-        private void StationButton_Click(object sender, RoutedEventArgs e)
+        private void AddRoute_Click(object sender, RoutedEventArgs e)
+        {
+            Window addRoute = new AddRouteDataWindow();
+            addRoute.Show();
+        }
+
+        private void AddCar_Click(object sender, RoutedEventArgs e)
+        {
+            Window addCar = new AddCarDataWindow();
+            addCar.Show();
+        }
+
+        private void AddDriver_Click(object sender, RoutedEventArgs e)
         {
             Window addDriver = new AddDriverDataWindow();
             addDriver.Show();
-        }
-
-        private void UpdateButton_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }
