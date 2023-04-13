@@ -67,3 +67,4 @@ C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows
 C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows\AddCarDataWindow.g.cs
 C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows\AddCarDataWindow.baml
 C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows\AddRouteDataWindow.g.cs
+C:\Users\A4Pia\Desktop\GetYourCar\GetYourCar\GetYourCar\obj\Debug\net7.0-windows\AddRouteDataWindow.baml

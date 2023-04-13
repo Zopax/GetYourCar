@@ -1,4 +1,5 @@
 ﻿using GetYourCar.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,8 @@ namespace GetYourCar
         public AddCarDataWindow()
         {
             InitializeComponent();
+            TypeCarCombo.ItemsSource = Helper.GetContext().TypeCars.ToList();
+            TypeCarCombo.DisplayMemberPath = "Name";
         }
 
         private void AddCar_Click(object sender, RoutedEventArgs e)
@@ -36,11 +39,7 @@ namespace GetYourCar
             newCar.Name = NameCar.Text;
             newCar.StateNumber = StateNumberCar.Text;
             newCar.NumberPassengers = Convert.ToInt32(NumberPassengersCar.Text);
-
-            newCar.IdTypeCarNavigation = new TypeCar()
-            {
-                Name = TypeCarName.Text
-            };
+            newCar.IdTypeCar = (int)TypeCarCombo.SelectedValue;
 
             Helper.GetContext().Cars.Add(newCar);
             Helper.GetContext().SaveChanges();

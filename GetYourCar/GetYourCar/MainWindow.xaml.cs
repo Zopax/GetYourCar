@@ -57,5 +57,20 @@ namespace GetYourCar
             Window addDriver = new AddDriverDataWindow();
             addDriver.Show();
         }
+
+        private void UpdateRoute_Click(object sender, RoutedEventArgs e)
+        {
+            RoutesDGrid.ItemsSource = Helper.GetContext().Routes.ToList();
+        }
+
+        private void UpdateCar_Click(object sender, RoutedEventArgs e)
+        {
+            CarsDGrid.ItemsSource = Helper.GetContext().Cars.ToList();
+        }
+
+        private void UpdateDriver_Click(object sender, RoutedEventArgs e)
+        {
+            DriversDGrid.ItemsSource = Helper.GetContext().Drivers.ToList();
+        }
     }
 }

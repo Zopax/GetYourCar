@@ -23,7 +23,7 @@ public partial class Route
 
     public virtual Itinerary IdItineraryNavigation { get; set; } = null!;
 
-    public string Car { get => IdCarNavigation.Name; }
+    public string? Car { get => IdCarNavigation.Name; }
     public string Driver 
     { 
         get

@@ -26,13 +26,14 @@
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
                                 <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
-                                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthdate, StringFormat={}{0:dd/MM/yyyy}}"/>
+                                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthdate, StringFormat={}{0:dd.MM.yyyy}}"/>
                                 <DataGridTextColumn Header="Категории прав" Binding="{Binding RightsCategories}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                         <StackPanel Grid.Row="1"
                                     Orientation="Horizontal">
                             <Button Name="StationButton" Content="Добавить" Click="AddDriver_Click" Margin="10"/>
+                            <Button Name="UpdateDriver" Content="Обновить" Click="UpdateDriver_Click" Margin="10"/>
                         </StackPanel>
                     </Grid>
                 </TabItem.Content>
@@ -62,6 +63,7 @@
                         <StackPanel Grid.Row="1"
                                     Orientation="Horizontal">
                             <Button Name="AddCar" Content="Добавить" Click="AddCar_Click" Margin="10"/>
+                            <Button Name="UpdateCar" Content="Обновить" Click="UpdateCar_Click" Margin="10"/>
                         </StackPanel>
                     </Grid>
                 </TabItem.Content>
@@ -91,6 +93,7 @@
                         <StackPanel Grid.Row="1"
                                     Orientation="Horizontal">
                             <Button Name="AddRoute" Content="Добавить" Click="AddRoute_Click" Margin="10"/>
+                            <Button Name="UpdateRoute" Content="Обновить" Click="UpdateRoute_Click" Margin="10"/>
                         </StackPanel>
                     </Grid>
                 </TabItem.Content>

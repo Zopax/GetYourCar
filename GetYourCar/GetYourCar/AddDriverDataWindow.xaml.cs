@@ -25,7 +25,7 @@ namespace GetYourCar
             InitializeComponent();
         }
 
-        private void Adddriver_Click(object sender, RoutedEventArgs e)
+        private void Addriver_Click(object sender, RoutedEventArgs e)
         {
             if (fNameDriver.Text == null || lNameDriver.Text == null || fNameDriver.Text == null || birthDriver.Text == null)
             {

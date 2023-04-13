@@ -5,24 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GetYourCar"
         mc:Ignorable="d"
-        Title="AddRouteDataWindow" Height="558" Width="440" ResizeMode="NoResize">
+        Title="Добавить рейс" Height="558" Width="440" ResizeMode="NoResize">
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="0,51,220,62">
-            <TextBlock HorizontalAlignment="Left" FontSize="20" Width="219" Height="46"><Run Text="Название маршрута:"/></TextBlock>
+        <StackPanel Orientation="Vertical">
+            <TextBlock HorizontalAlignment="Left" FontSize="20" Width="219" Height="32"><Run Text="Название маршрута:"/></TextBlock>
+            <ComboBox x:Name="ItinerariCombo" SelectedValuePath="Id" SelectedIndex="0"></ComboBox>
             <TextBlock HorizontalAlignment="Left" Width="143" Height="36"><Run FontSize="20" Text="Транспорт:"/></TextBlock>
+            <ComboBox x:Name="CarCombo" SelectedValuePath="Id" SelectedIndex="0"/>
             <TextBlock HorizontalAlignment="Left" FontSize="20" Text="Водитель:" Width="165" Height="40"/>
+            <ComboBox x:Name="DriverCombo" SelectedValuePath="Id" SelectedIndex="0"/>
             <TextBlock HorizontalAlignment="Left" FontSize="20" Text="Кол-во мест:"></TextBlock>
-        </StackPanel>
-        <StackPanel Orientation="Vertical" Margin="225,56,0,57">
-            <TextBox x:Name="NameItinerary" FontSize="18" Opacity="0.65" Width="214" Text="Введите что нибудь..." Height="40"/>
-            <TextBox x:Name="CarName" Opacity="0.65" Width="269" FontSize="18" Text="Введите что нибудь..." Height="40"/>
-            <TextBox x:Name="Driver" Opacity="0.65" Width="234" FontSize="18" Text="Введите что нибудь..." Height="40"/>
-            <TextBox x:Name="PassengerNumber" Opacity="0.65"  Width="234" FontSize="18" Text="Введите что нибудь..." Height="40"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="0,0,0,491" Grid.ColumnSpan="2">
-            <TextBlock HorizontalAlignment="Center" Width="440" FontSize="24">Добавить рейс:</TextBlock>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+            <TextBox x:Name="PassengerRouteNumber"/>
             <Button x:Name="AddRoute" Content="Добавить" FontSize="40" Click="AddRoute_Click" Width="440"/>
         </StackPanel>
     </Grid>
